@@ -1,15 +1,14 @@
 import mongoose from 'mongoose'
-import { string } from 'yup'
 
 const OrderSchema = new mongoose.Schema(
     {
         user:{
             id:{
-                type: string,
+                type: String,
                 required: true,
             },
             name: {
-                type: string,
+                type: String,
                 required: true, 
             },
         },
@@ -20,7 +19,7 @@ const OrderSchema = new mongoose.Schema(
                     required: true,
                 },
                 name:{
-                    type:String,
+                    type: String,
                     required: true,
                 },
                 price:{
