@@ -1,14 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup"
-
 import React from 'react'
 import { useForm } from "react-hook-form"
-
-
 import * as Yup from "yup";
 
 import LoginImg from '../../assets/ImgLogin.svg'
 import Logo from '../../assets/Logo_code_burguer.svg'
-
 import {
     Container,
     LoginImage,
