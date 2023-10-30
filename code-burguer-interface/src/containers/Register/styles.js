@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import Background from '../../assets/Background.svg'
 
+
 export const Container = styled.div`
 height: 100vh;
 width: 100vw;
@@ -11,7 +12,7 @@ justify-content: center;
 align-items: center;
 `
 
-export const LoginImage = styled.img`
+export const Register_Image= styled.img`
 height: 80%;
 `
 
@@ -32,7 +33,7 @@ h1{
     line-height: 28px;
     color: #ffffff;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 15px;
 }
 
 form{
@@ -47,8 +48,8 @@ font-weight: 500;
 font-size: 12px;
 Line-height: 14.06px;
 color: #FFFFFF;
-margin-top: 25px;
-margin-bottom: 5px;
+margin-top: ${props => (props.error ? '5px' : '12px')};
+margin-bottom: 2px;
 `
 
 export const Input = styled.input`
@@ -90,7 +91,7 @@ a {
 export const ErrorMessage = styled.p `
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 13px;
 Line-height: 16px;
 color: rgba(204, 23, 23, 1);
 margin-top: 2px;

@@ -5,10 +5,9 @@ import User from '../models/User'
 
 class SessionController {
     async store(request, response){
-
         const schema=Yup.object().shape({
             email: Yup.string().email().required(),
-            password: Yup.string().required(),
+            password: Yup.string().required().min(6),
         })
 
         const userEmailOrPasswordIncorrect = () => {
@@ -32,8 +31,8 @@ class SessionController {
             id: user.id,
             email,
             name:user.name,
-            admin: user.admin,
-            token: jwt.sign({ id: user.id, name:user.name }, authConfig.secret , {
+            admin:user.admin,
+            token:jwt.sign({ id: user.id, name:user.name }, authConfig.secret , {
                 expiresIn: authConfig.expiresIn ,
             }),
         })
