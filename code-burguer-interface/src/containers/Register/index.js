@@ -3,9 +3,9 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import * as Yup from "yup";
 
-import Button from '../../components/Button'
-import RegisterImage from '../../assets/registerImage.svg'
 import Logo from '../../assets/Logo_code_burguer.svg'
+import RegisterImage from '../../assets/registerImage.svg' 
+import Button from '../../components/Button'
 import api from '../../services/api'
 import {
     Container,
@@ -19,13 +19,13 @@ import {
 
 function Register () {
     const schema = Yup.object().shape({
-        name: Yup.string().required('O seu nome é obrigatório'),
+        name: Yup.string().required('O campo nome é obrigatório'),
         email: Yup.string()
             .email('Digite um e-mail válido')
-            .required('O email é obrigatório'),
+            .required('O campo email é obrigatório'),
         password: Yup.string()
             .required('A senha é obrigatória')
-            .min(6, 'A senha deve conter no minímo 6 digitos'),
+            .min(6, 'O campo senha deve conter no minímo 6 digitos'),
         confirmPassword: Yup.string()
             .required('A senha é obrigatória')
             .min(6, 'A senha deve conter no minímo 6 digitos')
@@ -45,7 +45,7 @@ function Register () {
         const response = await api.post('users', {
             name: clientData.name,
             email: clientData.email,
-            password: clientData.password
+            password_hash: clientData.password
         })
         console.log(response)
     }

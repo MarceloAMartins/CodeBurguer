@@ -8,17 +8,17 @@ class UserController {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
       email: Yup.string().email().required(),
-      password_hash: Yup.string().required(),
+      password_hash: Yup.string().required().min(6),
       admin: Yup.boolean(),
     });
 
-    const {name, email, password_hash, admin} = request.body;
-
-    if (!(await schema.isValid(request.body))) {
-      return response
-        .status(400)
-        .json({ error: "Make sure your data is correct" });
+    try{
+      await schema.validateSync(request.body, { abortEarly:false })
+    } catch (err) {
+      return response.status(400).json({ error: err.errors })
     }
+
+    const {name, email, password_hash, admin} = request.body;
 
     const userExists = await User.findOne({
       where: {email},

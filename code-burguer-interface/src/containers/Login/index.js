@@ -1,6 +1,7 @@
-import { yupResolver } from "@hookform/resolvers/yup"
 import React from 'react'
 import { useForm } from "react-hook-form"
+
+import { yupResolver } from "@hookform/resolvers/yup"
 import * as Yup from "yup";
 
 import Button from '../../components/Button'
@@ -21,9 +22,9 @@ function Login() {
     const schema = Yup.object().shape({
         email: Yup.string()
             .email('Digite um e-mail válido')
-            .required('O email é obrigatório'),
+            .required('O campo email é obrigatório'),
         password: Yup.string()
-            .required('A senha é obrigatória')
+            .required('O campo senha é obrigatória')
             .min(6, 'A senha deve conter no minímo 6 digitos')
 
     })
@@ -61,7 +62,7 @@ function Login() {
                     <Input type='password' {...register("password")} error={errors.password?.message} />
                     <ErrorMessage>{errors.password?.message}</ErrorMessage>
 
-                    <Button type="submit" style={{marginTop: 10, marginBottom: 25}} >Sign In</Button>
+                    <Button type="submit" style={{ marginTop: 10, marginBottom: 25 }} >Sign In</Button>
                 </form>
 
                 <SignInLink>
