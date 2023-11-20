@@ -3,35 +3,44 @@ import styled from 'styled-components'
 import Background from '../../assets/Background.svg'
 
 export const Container = styled.div`
+
 height: 100vh;
 width: 100vw;
 background: url('${Background}');
 display: flex;
 justify-content: center;
 align-items: center;
+flex-wrap: wrap;
+
+
 `
 
 export const LoginImage = styled.img`
+display: flex;
 height: 80%;
 `
 
 export const ContainerItens = styled.div`
+display: flex;
+flex-wrap: wrap;
 border-radius: 0 10px 10px 0;
 background: rgba(55, 55, 55, 0.95) ;
 
 height: 80%;
 padding: 25px 75px;
 display: flex;
+
 flex-direction: column;
 justify-content: center;
 
 h1{
+    display: flex;
+    align-self: center;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
     color: #ffffff;
-    text-align: center;
     margin-top: 90px;
 }
 
@@ -42,10 +51,11 @@ form{
 `
 
 export const Label = styled.p`
+display: flex;
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
-Line-height: 14.06px;
+line-height: 14.06px;
 color: #FFFFFF;
 margin-top: 25px;
 margin-bottom: 5px;
