@@ -1,10 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup"
 import React from 'react'
 import { useForm } from "react-hook-form"
+import {Link} from 'react-router-dom'
+import { toast } from 'react-toastify'
 import * as Yup from "yup";
 
-import { toast } from 'react-toastify'
-import {Link} from 'react-router-dom'
 
 import Logo from '../../assets/Logo_code_burguer.svg'
 import RegisterImage from '../../assets/registerImage.svg' 

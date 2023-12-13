@@ -1,14 +1,14 @@
+import { yupResolver } from "@hookform/resolvers/yup"
 import React from 'react'
 import { useForm } from "react-hook-form"
+import {Link, useHistory} from 'react-router-dom'
 import { toast } from 'react-toastify'
-import {Link} from 'react-router-dom'
-import { yupResolver } from "@hookform/resolvers/yup"
 import * as Yup from "yup";
 
-import { useUser } from '../../hooks/UserContext'
-import Button from '../../components/Button'
 import LoginImg from '../../assets/ImgLogin.svg'
 import Logo from '../../assets/Logo_code_burguer.svg'
+import Button from '../../components/Button'
+import { useUser } from '../../hooks/UserContext'
 import api from '../../services/api'
 import {
     Container,
@@ -21,6 +21,7 @@ import {
 } from './styles'
 
 function Login() {
+    const history = useHistory()
     const {putUserData} = useUser()
 
 
@@ -56,9 +57,12 @@ function Login() {
         )
 
         putUserData(data)
-       
-    }
 
+        setTimeout(() => {
+           history.push('/')  
+        }, 1000);
+  
+    }
 
     return (
         <Container>
