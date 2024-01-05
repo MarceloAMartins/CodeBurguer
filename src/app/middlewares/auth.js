@@ -11,7 +11,7 @@ export default (request,response, next) => {
    const token = authToken.split(' ')[1]
 
    try{
-    jwt.verify(token, authConfig.secret, function(err, decoded){
+    jwt.verify(token, authConfig.secret, function (err, decoded) {
         if(err){
             throw new Error()   
         }

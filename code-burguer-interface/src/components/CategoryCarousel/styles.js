@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { StyleSheetManager} from 'styled-components';
 
 export const Container = styled.div`
 background-color: #efefef;
@@ -17,11 +17,12 @@ flex-direction: column;
 `
 
 export const Image= styled.img`
-height: 200px;
-width: 200px;
+height:150px;
+width: 150px;
 border-radius: 10px;
 `
 
 export const Button = styled.button`
 margin-top: 16px;
+color: blue;
 `
