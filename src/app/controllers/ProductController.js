@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import Product from "../models/Product";
 import User from "../models/User";
-import Category from "./../models/Category";
+import Category from "../models/Category";
 
 class ProductController {
   async store(request, response) {

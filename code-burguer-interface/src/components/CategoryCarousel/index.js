@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Carousel from 'react-elastic-carousel'
 
 import Category from '../../assets/CATEGORIAS.png'
-import api from '../../services/api.js'
-import { Container, CategoryImg, Containeritems, Image, Button } from './styles.js'
+import api from '../../services/api'
+import { Container, CategoryImg, Containeritems, Image, Button } from './styles'
 
 
 function CategoryCarousel() {
@@ -39,7 +39,7 @@ function CategoryCarousel() {
                 {categories &&
                       categories.map ( category => (                     
                         <Containeritems key={ category.id } >                           
-                            <Image src= {category.url}  alt="foto da categoria" />
+                            <Image src= {category.url} />
                             <Button>{ category.name }</Button>
                         </Containeritems>                       
                     ))}                

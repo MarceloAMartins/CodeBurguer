@@ -1,10 +1,9 @@
 import * as Yup from "yup";
 import Category from "../models/Category";
-import User from "./../models/User";
+import User from "../models/User";
 
 class CategoryController {
   async store(request, response) {
-    try {
       const schema = Yup.object().shape({
         name: Yup.string().required(),
       });
@@ -34,11 +33,8 @@ class CategoryController {
       }
 
       const { id } = await Category.create({ name, path });
-
       return response.json({ id, name });
-    } catch (err) {
-      console.log(err);
-    }
+   
   }
 
   async index(request, response) {
@@ -84,7 +80,7 @@ class CategoryController {
 
       await Category.update({ name, path }, {where: {id}});
 
-      return response.status(200).json();
+      return response.status(200).json({name,id});
     } catch (err) {
       console.log(err);
     }

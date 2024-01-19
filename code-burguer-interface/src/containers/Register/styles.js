@@ -13,14 +13,14 @@ align-items: center;
 `
 
 export const Register_Image= styled.img`
-height: 80%;
+height: 90%;
 `
 
 export const ContainerItens = styled.div`
 border-radius: 0 10px 10px 0;
 background: rgba(55, 55, 55, 0.95) ;
 
-height: 80%;
+height: 90%;
 padding: 25px 75px;
 display: flex;
 flex-direction: column;
@@ -29,11 +29,11 @@ justify-content: center;
 h1{
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     color: #ffffff;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 form{
@@ -46,15 +46,15 @@ export const Label = styled.p`
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
-Line-height: 14.06px;
+Line-height: 10px;
 color: #FFFFFF;
 margin-top: ${props => (props.error ? '5px' : '12px')};
-margin-bottom: 2px;
+margin-bottom: 5px;
 `
 
 export const Input = styled.input`
 width: 391.42px;
-height: 38.32px;
+height: 33.32px;
 border-radius: 5px;
 background: #ffffff;
 box-shadow: 3px 3px 10px rgba(74, 144, 226,0.19);

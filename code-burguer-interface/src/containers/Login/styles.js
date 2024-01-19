@@ -17,21 +17,18 @@ flex-wrap: wrap;
 
 export const LoginImage = styled.img`
 display: flex;
-height: 80%;
+height: 85%;
 `
 
 export const ContainerItens = styled.div`
-display: flex;
-flex-wrap: wrap;
-border-radius: 0 10px 10px 0;
-background: rgba(55, 55, 55, 0.95) ;
-
-height: 80%;
-padding: 25px 75px;
-display: flex;
-
-flex-direction: column;
-justify-content: center;
+  background: rgba(55, 55, 55, 0.95);
+  box-shadow: 0px 4px 15px rgba(74, 144, 226, 0.24);
+  border-radius: 0 10px 10px 0;
+  padding: 25px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
 
 h1{
     display: flex;
@@ -41,7 +38,7 @@ h1{
     font-size: 24px;
     line-height: 28px;
     color: #ffffff;
-    margin-top: 90px;
+    margin-top: 10px;
 }
 
 form{

@@ -75,7 +75,7 @@ function Register () {
         <Container>
             <Register_Image src={RegisterImage} alt="RegisterImg" />
             <ContainerItens>
-                <img src={Logo} alt="Logo" />
+                <img src={Logo} alt="Logo" style={{height:'100px', marginTop: '10px'}} />
                 <h1>Cadastre-se</h1>
 
                 <form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -96,7 +96,7 @@ function Register () {
                     <ErrorMessage>{errors.confirmPassword?.message}</ErrorMessage>
 
 
-                    <Button type="submit" style={{marginTop: 20, marginBottom: 10}} >Cadastro</Button>
+                    <Button type="submit" style={{marginTop: 15, marginBottom: 10}} >Cadastro</Button>
                 </form>
 
                 <SignInLink>
