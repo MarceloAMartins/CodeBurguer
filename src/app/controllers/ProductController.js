@@ -83,7 +83,7 @@ class ProductController {
       if (!product) {
         return response
           .status(401)
-          .json({ error: "Make sure yourproduct Id is correct" });
+          .json({ error: "Make sure your product Id is correct" });
       }
 
       let path
