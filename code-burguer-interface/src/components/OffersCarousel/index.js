@@ -13,8 +13,8 @@ function OffersCarousel() {
         async function loadOffers() {
             const {data} = await api.get('products')
 
-
-            setOffers(data)
+            const onlyOfeer =  data.filter(products => products.offer)
+            setOffers(onlyOfeer)
         }
         loadOffers()
     }, [])
@@ -40,7 +40,9 @@ function OffersCarousel() {
                       Offers.map ( product => (                     
                         <Containeritems key={ product.id } >                           
                             <Image src= {product.url} alt="foto da produto" />
-                            <Button>{product.name }</Button>
+                            <p>{product.name}</p>
+                            <p>{product.price}</p>
+                            <Button> Peça agora </Button>
                         </Containeritems>                       
                     ))}                
             </Carousel>
